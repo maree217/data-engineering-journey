@@ -1632,6 +1632,72 @@ body {
     border-top: 1px solid rgba(123, 97, 255, 0.2);
 }
 
+/* Phase 4 Preview */
+.phase4-preview {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+    color: white;
+    text-align: center;
+}
+
+.phase4-preview h5 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.phase4-features {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-preview {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.phase4-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+}
+
+.phase4-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 107, 107, 0.6);
+    color: white;
+    text-decoration: none;
+}
+
+.alternative-resources {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.alternative-resources h6 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-ai h1 {

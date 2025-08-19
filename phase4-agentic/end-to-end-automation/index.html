@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 4: End-to-End Agent Automation</title>
+    <link rel="stylesheet" href="../assets/css/agentic-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+</head>
+<body>
+    <nav class="phase-nav">
+        <div class="nav-container">
+            <div class="phase-indicator">
+                <a href="../../phase1-traditional/html-dashboard/index.html" class="phase-link completed">Phase 1</a>
+                <a href="../../phase2-modern/mlops-pipeline/index.html" class="phase-link completed">Phase 2</a>
+                <a href="../../phase3-ai-driven/vector-search/index.html" class="phase-link completed">Phase 3</a>
+                <a href="#" class="phase-link current">Phase 4</a>
+            </div>
+            <h1>End-to-End Agent Automation</h1>
+        </div>
+    </nav>
+
+    <header class="hero-agentic">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Phase 4: End-to-End Agent Automation</h1>
+                <h2>Complete Business Intelligence with Knowledge Graph Pipelines</h2>
+                <p>Experience how AI agents can replace entire ML pipelines using knowledge graphs, semantic search, and automated decision-making systems.</p>
+                
+                <div class="agentic-features">
+                    <div class="feature-highlight">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-info">
+                            <h3>Multi-Agent Orchestration</h3>
+                            <p>Complete business workflows managed by specialized AI agents</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-icon">🕸️</div>
+                        <div class="feature-info">
+                            <h3>Knowledge Graph Intelligence</h3>
+                            <p>Graph algorithms replace traditional machine learning models</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-info">
+                            <h3>Real-time Automation</h3>
+                            <p>End-to-end pipelines from data ingestion to visualization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#business-scenarios" class="btn-hero">🚀 Explore Business Scenarios</a>
+                    <a href="#agent-demos" class="btn-secondary">🛠️ Try Agent Tools</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-agents">
+            <div class="agent-particle" data-agent="extractor">📥</div>
+            <div class="agent-particle" data-agent="processor">⚙️</div>
+            <div class="agent-particle" data-agent="analyzer">🧠</div>
+            <div class="agent-particle" data-agent="visualizer">📊</div>
+            <div class="agent-particle" data-agent="orchestrator">🎯</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Revolution Section -->
+        <section id="agentic-revolution" class="section">
+            <div class="container">
+                <h2>🔮 The Agentic AI Revolution</h2>
+                <div class="revolution-comparison">
+                    <div class="comparison-grid">
+                        <div class="comparison-card traditional">
+                            <h3>❌ Traditional Approach</h3>
+                            <div class="approach-flow">
+                                <div class="flow-step">Manual ETL Scripts</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Static ML Models</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Fixed Dashboards</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Human Analysis</div>
+                            </div>
+                            <div class="approach-issues">
+                                <span class="issue">🐌 Slow to adapt</span>
+                                <span class="issue">🔧 High maintenance</span>
+                                <span class="issue">❓ Black box decisions</span>
+                                <span class="issue">💰 Expensive scaling</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-card agentic">
+                            <h3>✅ Agentic Automation</h3>
+                            <div class="approach-flow">
+                                <div class="flow-step">Intelligent Data Agents</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Knowledge Graph Reasoning</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Dynamic Visualizations</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Automated Decisions</div>
+                            </div>
+                            <div class="approach-benefits">
+                                <span class="benefit">⚡ Real-time adaptation</span>
+                                <span class="benefit">🔄 Self-maintaining</span>
+                                <span class="benefit">🔍 Explainable reasoning</span>
+                                <span class="benefit">📈 Infinite scaling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Scenarios Section -->
+        <section id="business-scenarios" class="section bg-light">
+            <div class="container">
+                <h2>🏢 Five End-to-End Business Scenarios</h2>
+                <p class="section-intro">Experience complete business intelligence automation across different industries</p>
+                
+                <div class="scenarios-grid">
+                    <!-- Customer 360 -->
+                    <div class="scenario-card" data-scenario="customer360">
+                        <div class="scenario-header">
+                            <div class="scenario-icon">👥</div>
+                            <div class="scenario-info">
+                                <h3>Customer 360 Intelligence</h3>
+                                <span class="scenario-industry">E-commerce & Retail</span>
+                            </div>
+                        </div>
+                        <div class="scenario-description">
+                            <p>Complete customer lifecycle management with automated insights, churn prediction, and personalized recommendations using graph traversal instead of ML models.</p>
+                        </div>
+                        <div class="scenario-pipeline">
+                            <h4>Agent Pipeline:</h4>
+                            <div class="pipeline-flow">
+                                <span class="pipeline-step">Data Extraction Agent</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Knowledge Graph Builder</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Insight Generation Agent</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Visualization Agent</span>
+                            </div>
+                        </div>
+                        <div class="scenario-benefits">
+                            <span class="benefit-tag">Customer Journey Mapping</span>
+                            <span class="benefit-tag">Churn Prediction</span>
+                            <span class="benefit-tag">Personalization</span>
+                            <span class="benefit-tag">Revenue Optimization</span>
+                        </div>
+                        <button class="scenario-btn" onclick="openScenario('customer360')">Launch Demo</button>
+                    </div>
+
+                    <!-- Supply Chain -->
+                    <div class="scenario-card" data-scenario="supply-chain">
+                        <div class="scenario-header">
+                            <div class="scenario-icon">🏭</div>
+                            <div class="scenario-info">
+                                <h3>Supply Chain Optimization</h3>
+                                <span class="scenario-industry">Manufacturing & Logistics</span>
+                            </div>
+                        </div>
+                        <div class="scenario-description">
+                            <p>End-to-end supply chain visibility with predictive insights, route optimization, and risk assessment using graph algorithms for real-time decision making.</p>
+                        </div>
+                        <div class="scenario-pipeline">
+                            <h4>Agent Pipeline:</h4>
+                            <div class="pipeline-flow">
+                                <span class="pipeline-step">IoT Data Harvesting</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Supply Network Graph</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Optimization Agent</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Executive Dashboard</span>
+                            </div>
+                        </div>
+                        <div class="scenario-benefits">
+                            <span class="benefit-tag">Route Optimization</span>
+                            <span class="benefit-tag">Risk Assessment</span>
+                            <span class="benefit-tag">Inventory Management</span>
+                            <span class="benefit-tag">Cost Reduction</span>
+                        </div>
+                        <button class="scenario-btn" onclick="openScenario('supply-chain')">Launch Demo</button>
+                    </div>
+
+                    <!-- Fraud Detection -->
+                    <div class="scenario-card" data-scenario="fraud-detection">
+                        <div class="scenario-header">
+                            <div class="scenario-icon">🛡️</div>
+                            <div class="scenario-info">
+                                <h3>Financial Fraud Detection</h3>
+                                <span class="scenario-industry">Banking & Fintech</span>
+                            </div>
+                        </div>
+                        <div class="scenario-description">
+                            <p>Real-time fraud prevention with automated compliance checking, pattern detection, and investigation reports using transaction network analysis.</p>
+                        </div>
+                        <div class="scenario-pipeline">
+                            <h4>Agent Pipeline:</h4>
+                            <div class="pipeline-flow">
+                                <span class="pipeline-step">Transaction Monitor</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Fraud Graph Builder</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Pattern Detection</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Investigation Agent</span>
+                            </div>
+                        </div>
+                        <div class="scenario-benefits">
+                            <span class="benefit-tag">Real-time Detection</span>
+                            <span class="benefit-tag">AML Compliance</span>
+                            <span class="benefit-tag">Pattern Analysis</span>
+                            <span class="benefit-tag">Investigation Automation</span>
+                        </div>
+                        <button class="scenario-btn" onclick="openScenario('fraud-detection')">Launch Demo</button>
+                    </div>
+
+                    <!-- Marketing Attribution -->
+                    <div class="scenario-card" data-scenario="marketing">
+                        <div class="scenario-header">
+                            <div class="scenario-icon">🎯</div>
+                            <div class="scenario-info">
+                                <h3>Marketing Attribution</h3>
+                                <span class="scenario-industry">Digital Marketing</span>
+                            </div>
+                        </div>
+                        <div class="scenario-description">
+                            <p>Multi-channel marketing effectiveness with automated campaign optimization, attribution modeling, and ROI analysis using customer journey graphs.</p>
+                        </div>
+                        <div class="scenario-pipeline">
+                            <h4>Agent Pipeline:</h4>
+                            <div class="pipeline-flow">
+                                <span class="pipeline-step">Multi-Channel Data</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Journey Graph Agent</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Attribution Modeling</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">ROI Reporting</span>
+                            </div>
+                        </div>
+                        <div class="scenario-benefits">
+                            <span class="benefit-tag">Cross-Channel Attribution</span>
+                            <span class="benefit-tag">Campaign Optimization</span>
+                            <span class="benefit-tag">Budget Allocation</span>
+                            <span class="benefit-tag">ROI Measurement</span>
+                        </div>
+                        <button class="scenario-btn" onclick="openScenario('marketing')">Launch Demo</button>
+                    </div>
+
+                    <!-- Healthcare -->
+                    <div class="scenario-card" data-scenario="healthcare">
+                        <div class="scenario-header">
+                            <div class="scenario-icon">🏥</div>
+                            <div class="scenario-info">
+                                <h3>Healthcare Care Coordination</h3>
+                                <span class="scenario-industry">Healthcare & Life Sciences</span>
+                            </div>
+                        </div>
+                        <div class="scenario-description">
+                            <p>Integrated patient care with predictive health insights, treatment recommendations, and care coordination using medical knowledge graphs.</p>
+                        </div>
+                        <div class="scenario-pipeline">
+                            <h4>Agent Pipeline:</h4>
+                            <div class="pipeline-flow">
+                                <span class="pipeline-step">Medical Data Integration</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Medical Knowledge Graph</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Clinical Decision Support</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="pipeline-step">Care Coordination</span>
+                            </div>
+                        </div>
+                        <div class="scenario-benefits">
+                            <span class="benefit-tag">Drug Interactions</span>
+                            <span class="benefit-tag">Treatment Recommendations</span>
+                            <span class="benefit-tag">Care Coordination</span>
+                            <span class="benefit-tag">Outcome Prediction</span>
+                        </div>
+                        <button class="scenario-btn" onclick="openScenario('healthcare')">Launch Demo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agent Demos Section -->
+        <section id="agent-demos" class="section">
+            <div class="container">
+                <h2>🛠️ Interactive Agent Tools</h2>
+                <p class="section-intro">Build and explore agentic systems with these powerful interactive tools</p>
+                
+                <div class="demos-grid">
+                    <!-- Workflow Designer -->
+                    <div class="demo-card featured">
+                        <div class="demo-header">
+                            <h3>🔧 Agent Workflow Designer</h3>
+                            <span class="demo-badge">Interactive Builder</span>
+                        </div>
+                        <div class="demo-preview">
+                            <div class="workflow-preview">
+                                <div class="workflow-node data">📥 Data</div>
+                                <div class="workflow-connection">→</div>
+                                <div class="workflow-node process">⚙️ Process</div>
+                                <div class="workflow-connection">→</div>
+                                <div class="workflow-node analyze">🧠 Analyze</div>
+                                <div class="workflow-connection">→</div>
+                                <div class="workflow-node visualize">📊 Visualize</div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <p>Drag-and-drop interface for creating multi-agent workflows with real-time monitoring and performance analytics.</p>
+                        </div>
+                        <div class="demo-features">
+                            <span class="feature-tag">Visual Workflow Builder</span>
+                            <span class="feature-tag">Agent Templates</span>
+                            <span class="feature-tag">Real-time Monitoring</span>
+                            <span class="feature-tag">Performance Analytics</span>
+                        </div>
+                        <button class="demo-btn primary" onclick="openDemo('workflow-designer')">Launch Designer</button>
+                    </div>
+
+                    <!-- Knowledge Graph Explorer -->
+                    <div class="demo-card">
+                        <div class="demo-header">
+                            <h3>🕸️ Knowledge Graph Explorer</h3>
+                            <span class="demo-badge">Graph Analytics</span>
+                        </div>
+                        <div class="demo-preview">
+                            <div class="graph-preview">
+                                <svg class="mini-graph" viewBox="0 0 200 120">
+                                    <circle cx="50" cy="60" r="15" class="node customer"/>
+                                    <circle cx="100" cy="30" r="12" class="node product"/>
+                                    <circle cx="100" cy="90" r="12" class="node order"/>
+                                    <circle cx="150" cy="60" r="10" class="node category"/>
+                                    <line x1="65" y1="60" x2="85" y2="35" class="edge"/>
+                                    <line x1="65" y1="60" x2="85" y2="85" class="edge"/>
+                                    <line x1="112" y1="30" x2="140" y2="55" class="edge"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <p>Interactive graph visualization with advanced querying, algorithm exploration, and business insight generation.</p>
+                        </div>
+                        <div class="demo-features">
+                            <span class="feature-tag">Interactive Visualization</span>
+                            <span class="feature-tag">Cypher Queries</span>
+                            <span class="feature-tag">Graph Algorithms</span>
+                            <span class="feature-tag">Business Insights</span>
+                        </div>
+                        <button class="demo-btn" onclick="openDemo('graph-explorer')">Explore Graphs</button>
+                    </div>
+
+                    <!-- Hybrid Search Engine -->
+                    <div class="demo-card">
+                        <div class="demo-header">
+                            <h3>🔍 Hybrid Vector-Graph Search</h3>
+                            <span class="demo-badge">Semantic Search</span>
+                        </div>
+                        <div class="demo-preview">
+                            <div class="search-preview">
+                                <div class="search-components">
+                                    <div class="component vector">Vector<br/>Embeddings</div>
+                                    <div class="component-plus">+</div>
+                                    <div class="component graph">Knowledge<br/>Graph</div>
+                                    <div class="component-equals">=</div>
+                                    <div class="component result">Powerful<br/>Search</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <p>Next-generation search combining vector embeddings with graph relationships for unprecedented accuracy and explainability.</p>
+                        </div>
+                        <div class="demo-features">
+                            <span class="feature-tag">Semantic Understanding</span>
+                            <span class="feature-tag">Relationship Context</span>
+                            <span class="feature-tag">Explainable Results</span>
+                            <span class="feature-tag">Real-time Updates</span>
+                        </div>
+                        <button class="demo-btn" onclick="openDemo('hybrid-search')">Try Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge vs ML Section -->
+        <section id="knowledge-vs-ml" class="section bg-dark">
+            <div class="container">
+                <h2>🧠 Why Knowledge Graphs Replace Machine Learning</h2>
+                <div class="comparison-detailed">
+                    <div class="comparison-intro">
+                        <p>Discover how knowledge graphs and graph algorithms provide superior business intelligence compared to traditional machine learning approaches.</p>
+                    </div>
+                    
+                    <div class="detailed-comparison-grid">
+                        <div class="comparison-aspect">
+                            <h3>⚡ Speed & Performance</h3>
+                            <div class="aspect-comparison">
+                                <div class="ml-approach">
+                                    <h4>Traditional ML</h4>
+                                    <ul>
+                                        <li>Hours of training time</li>
+                                        <li>Batch processing delays</li>
+                                        <li>Model deployment overhead</li>
+                                        <li>Retraining cycles</li>
+                                    </ul>
+                                </div>
+                                <div class="kg-approach">
+                                    <h4>Knowledge Graphs</h4>
+                                    <ul>
+                                        <li>Instant query responses</li>
+                                        <li>Real-time updates</li>
+                                        <li>No training required</li>
+                                        <li>Immediate insights</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-aspect">
+                            <h3>🔍 Explainability</h3>
+                            <div class="aspect-comparison">
+                                <div class="ml-approach">
+                                    <h4>Traditional ML</h4>
+                                    <ul>
+                                        <li>Black box decisions</li>
+                                        <li>Complex interpretability tools</li>
+                                        <li>Statistical approximations</li>
+                                        <li>Hard to audit</li>
+                                    </ul>
+                                </div>
+                                <div class="kg-approach">
+                                    <h4>Knowledge Graphs</h4>
+                                    <ul>
+                                        <li>Clear reasoning paths</li>
+                                        <li>Visual relationship maps</li>
+                                        <li>Transparent logic</li>
+                                        <li>Easy validation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-aspect">
+                            <h3>🔄 Adaptability</h3>
+                            <div class="aspect-comparison">
+                                <div class="ml-approach">
+                                    <h4>Traditional ML</h4>
+                                    <ul>
+                                        <li>Fixed feature engineering</li>
+                                        <li>Drift detection needed</li>
+                                        <li>Expensive retraining</li>
+                                        <li>Version management issues</li>
+                                    </ul>
+                                </div>
+                                <div class="kg-approach">
+                                    <h4>Knowledge Graphs</h4>
+                                    <ul>
+                                        <li>Dynamic schema evolution</li>
+                                        <li>Automatic relationship discovery</li>
+                                        <li>Incremental knowledge updates</li>
+                                        <li>Self-organizing structure</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="graph-advantages">
+                        <h3>🎯 Graph Algorithm Superpowers</h3>
+                        <div class="algorithms-showcase">
+                            <div class="algorithm-demo">
+                                <div class="algorithm-icon">🌐</div>
+                                <h4>Centrality Analysis</h4>
+                                <p>Identify key influencers, bottlenecks, and critical nodes without training models</p>
+                            </div>
+                            <div class="algorithm-demo">
+                                <div class="algorithm-icon">🎯</div>
+                                <h4>Community Detection</h4>
+                                <p>Discover customer segments and product clusters through natural groupings</p>
+                            </div>
+                            <div class="algorithm-demo">
+                                <div class="algorithm-icon">🔄</div>
+                                <h4>Path Finding</h4>
+                                <p>Optimize routes, trace connections, and understand relationship chains</p>
+                            </div>
+                            <div class="algorithm-demo">
+                                <div class="algorithm-icon">🧮</div>
+                                <h4>Graph Neural Networks</h4>
+                                <p>When ML is needed, graph-based models outperform traditional approaches</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Progression -->
+        <section id="course-progression" class="section">
+            <div class="container">
+                <h2>📚 Phase 4 Learning Journey</h2>
+                <div class="learning-timeline">
+                    <div class="timeline-week">
+                        <div class="week-number">Week 1-2</div>
+                        <div class="week-content">
+                            <h3>Agent Orchestration Fundamentals</h3>
+                            <ul>
+                                <li>Multi-agent system design patterns</li>
+                                <li>LangGraph workflow creation</li>
+                                <li>Agent communication protocols</li>
+                                <li>Error handling and recovery</li>
+                            </ul>
+                            <div class="week-demo">🔧 Build your first agent workflow</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-week">
+                        <div class="week-number">Week 3-4</div>
+                        <div class="week-content">
+                            <h3>Knowledge Graph Engineering</h3>
+                            <ul>
+                                <li>Graph data modeling best practices</li>
+                                <li>Entity resolution and data quality</li>
+                                <li>Graph algorithms for business insights</li>
+                                <li>Neo4j advanced querying</li>
+                            </ul>
+                            <div class="week-demo">🕸️ Create business knowledge graphs</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-week">
+                        <div class="week-number">Week 5-6</div>
+                        <div class="week-content">
+                            <h3>End-to-End Business Scenarios</h3>
+                            <ul>
+                                <li>Choose 2 of 5 business scenarios</li>
+                                <li>Complete agent pipeline implementation</li>
+                                <li>Performance optimization</li>
+                                <li>Business impact measurement</li>
+                            </ul>
+                            <div class="week-demo">🏢 Launch production-ready systems</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-week">
+                        <div class="week-number">Week 7-8</div>
+                        <div class="week-content">
+                            <h3>Advanced Graph Analytics</h3>
+                            <ul>
+                                <li>Graph neural networks</li>
+                                <li>Knowledge graph embeddings</li>
+                                <li>Hybrid vector-graph systems</li>
+                                <li>Production deployment</li>
+                            </ul>
+                            <div class="week-demo">🚀 Scale to enterprise level</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Completion -->
+                <div class="phase4-completion">
+                    <h3>🎓 Phase 4 Mastery Achievement</h3>
+                    <p>Upon completion, you'll be a certified <strong>Agentic AI Systems Architect</strong> capable of designing and implementing end-to-end automated business intelligence solutions.</p>
+                    
+                    <div class="completion-skills">
+                        <div class="skill-category">
+                            <h4>🤖 Agent Orchestration</h4>
+                            <ul>
+                                <li>Multi-agent workflow design</li>
+                                <li>Agent communication patterns</li>
+                                <li>Error handling and recovery</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>🕸️ Graph Intelligence</h4>
+                            <ul>
+                                <li>Knowledge graph modeling</li>
+                                <li>Graph algorithm application</li>
+                                <li>Hybrid search systems</li>
+                                <li>Business insight generation</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>🏢 Business Implementation</h4>
+                            <ul>
+                                <li>End-to-end pipeline design</li>
+                                <li>ROI measurement</li>
+                                <li>Production deployment</li>
+                                <li>Enterprise scaling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="get-started" class="section bg-gradient">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>🚀 Ready to Build the Future of Business Intelligence?</h2>
+                    <p>Start with any business scenario and experience the power of agentic automation</p>
+                    
+                    <div class="cta-options">
+                        <button class="cta-btn primary" onclick="startLearningPath()">
+                            🎯 Start with Customer 360
+                        </button>
+                        <button class="cta-btn secondary" onclick="openDemo('workflow-designer')">
+                            🔧 Try Workflow Designer
+                        </button>
+                        <button class="cta-btn tertiary" onclick="exploreAllScenarios()">
+                            🌟 Explore All Scenarios
+                        </button>
+                    </div>
+
+                    <div class="learning-path-preview">
+                        <h3>📈 Recommended Learning Path</h3>
+                        <div class="path-steps">
+                            <div class="path-step">1. Agent Workflow Designer</div>
+                            <div class="path-arrow">→</div>
+                            <div class="path-step">2. Knowledge Graph Explorer</div>
+                            <div class="path-arrow">→</div>
+                            <div class="path-step">3. Business Scenario Deep-Dive</div>
+                            <div class="path-arrow">→</div>
+                            <div class="path-step">4. Production Implementation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="agentic-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🎯 Phase Navigation</h4>
+                    <ul>
+                        <li><a href="../../phase1-traditional/html-dashboard/index.html">Phase 1: Traditional Data</a></li>
+                        <li><a href="../../phase2-modern/mlops-pipeline/index.html">Phase 2: Modern Engineering</a></li>
+                        <li><a href="../../phase3-ai-driven/vector-search/index.html">Phase 3: AI-Driven Systems</a></li>
+                        <li><a href="#">Phase 4: Agent Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🏢 Business Scenarios</h4>
+                    <ul>
+                        <li>Customer 360 Intelligence</li>
+                        <li>Supply Chain Optimization</li>
+                        <li>Financial Fraud Detection</li>
+                        <li>Marketing Attribution</li>
+                        <li>Healthcare Care Coordination</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🛠️ Agent Tools</h4>
+                    <ul>
+                        <li>Workflow Designer</li>
+                        <li>Knowledge Graph Explorer</li>
+                        <li>Hybrid Vector-Graph Search</li>
+                        <li>Business Analytics Platform</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🚀 Next Steps</h4>
+                    <ul>
+                        <li>Enterprise Implementation</li>
+                        <li>Custom Agent Development</li>
+                        <li>Advanced Graph Analytics</li>
+                        <li>Production Scaling</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Data Engineering Journey - Phase 4: End-to-End Agent Automation</p>
+                <p>🤖 Powered by Agentic AI and Knowledge Graph Intelligence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/agentic-main.js"></script>
+</body>
+</html>
