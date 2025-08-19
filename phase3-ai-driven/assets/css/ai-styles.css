@@ -13,6 +13,7 @@ body {
     color: #1a1a1a;
     background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
     min-height: 100vh;
+    zoom: 0.8;
 }
 
 .container {
