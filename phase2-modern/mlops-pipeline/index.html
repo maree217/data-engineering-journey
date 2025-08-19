@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 2: Modern Data Engineering & MLOps</title>
+    <link rel="stylesheet" href="../assets/css/modern-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <nav class="phase-nav">
+        <div class="nav-container">
+            <div class="phase-indicator">
+                <a href="../../phase1-traditional/html-dashboard/index.html" class="phase-link completed">Phase 1</a>
+                <a href="#" class="phase-link current">Phase 2</a>
+                <a href="../../phase3-ai-driven/vector-search/index.html" class="phase-link">Phase 3</a>
+            </div>
+            <h1>Modern Data Engineering & MLOps</h1>
+        </div>
+    </nav>
+
+    <header class="hero-modern">
+        <div class="container">
+            <h1>Phase 2: Modern Data Engineering</h1>
+            <p>Cloud-Native Architecture, MLOps Pipelines & Advanced Analytics</p>
+            <div class="tech-badges">
+                <span class="tech-badge azure">Azure</span>
+                <span class="tech-badge synapse">Synapse</span>
+                <span class="tech-badge ml">Azure ML</span>
+                <span class="tech-badge databricks">Databricks</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Evolution Section -->
+        <section id="evolution" class="section">
+            <div class="container">
+                <h2>🚀 The Evolution to Modern Data Engineering</h2>
+                <div class="evolution-comparison">
+                    <div class="comparison-side traditional">
+                        <h3>Traditional Approach</h3>
+                        <div class="approach-card">
+                            <h4>❌ Challenges</h4>
+                            <ul>
+                                <li>Monolithic data warehouses</li>
+                                <li>Batch processing only</li>
+                                <li>Manual ETL processes</li>
+                                <li>Siloed data teams</li>
+                                <li>Slow time-to-insight</li>
+                                <li>Limited scalability</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="comparison-side modern">
+                        <h3>Modern Approach</h3>
+                        <div class="approach-card">
+                            <h4>✅ Solutions</h4>
+                            <ul>
+                                <li>Cloud-native data lakes</li>
+                                <li>Real-time streaming</li>
+                                <li>Automated ELT pipelines</li>
+                                <li>DataOps & collaboration</li>
+                                <li>Self-service analytics</li>
+                                <li>Infinite scalability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cloud Architecture Section -->
+        <section id="cloud-architecture" class="section bg-light">
+            <div class="container">
+                <h2>☁️ Modern Cloud Data Architecture</h2>
+                <div class="architecture-demo">
+                    <div class="architecture-controls">
+                        <h3>Interactive Azure Data Architecture</h3>
+                        <div class="controls">
+                            <button id="show-ingestion" class="arch-button">Data Ingestion</button>
+                            <button id="show-storage" class="arch-button">Storage Layer</button>
+                            <button id="show-processing" class="arch-button">Processing Engine</button>
+                            <button id="show-analytics" class="arch-button">Analytics Layer</button>
+                            <button id="show-complete" class="arch-button active">Complete Architecture</button>
+                        </div>
+                    </div>
+                    
+                    <div class="architecture-diagram">
+                        <div class="mermaid" id="architecture-mermaid">
+                            graph TB
+                                A[Data Sources] --> B[Azure Data Factory]
+                                B --> C[Azure Data Lake Gen2]
+                                C --> D[Azure Synapse Analytics]
+                                D --> E[Power BI]
+                                D --> F[Azure ML]
+                                F --> G[Model Registry]
+                                G --> H[Azure Container Instances]
+                        </div>
+                    </div>
+
+                    <div class="service-cards">
+                        <div class="service-card" data-service="ingestion">
+                            <h4>📥 Data Ingestion</h4>
+                            <div class="service-details">
+                                <p><strong>Azure Data Factory</strong></p>
+                                <p>90+ connectors, scheduled & event-driven pipelines</p>
+                                <div class="service-stats">
+                                    <span>Real-time: ✅</span>
+                                    <span>Batch: ✅</span>
+                                    <span>Streaming: ✅</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-service="storage">
+                            <h4>🗄️ Storage Layer</h4>
+                            <div class="service-details">
+                                <p><strong>Azure Data Lake Gen2</strong></p>
+                                <p>Hierarchical namespace, POSIX permissions, unlimited scale</p>
+                                <div class="service-stats">
+                                    <span>Capacity: Unlimited</span>
+                                    <span>Cost: $0.018/GB</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-service="processing">
+                            <h4>⚡ Processing</h4>
+                            <div class="service-details">
+                                <p><strong>Azure Synapse Analytics</strong></p>
+                                <p>SQL + Spark unified analytics platform</p>
+                                <div class="service-stats">
+                                    <span>SQL Pool: ✅</span>
+                                    <span>Spark Pool: ✅</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-service="analytics">
+                            <h4>📊 Analytics</h4>
+                            <div class="service-details">
+                                <p><strong>Power BI + Azure ML</strong></p>
+                                <p>Self-service BI and automated machine learning</p>
+                                <div class="service-stats">
+                                    <span>Users: Millions</span>
+                                    <span>Models: AutoML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MLOps Pipeline Section -->
+        <section id="mlops" class="section">
+            <div class="container">
+                <h2>🤖 MLOps Pipeline Demonstration</h2>
+                <div class="mlops-dashboard">
+                    <div class="pipeline-status">
+                        <h3>ML Pipeline Status</h3>
+                        <div class="status-grid">
+                            <div class="status-card" id="data-prep-status">
+                                <h4>1. Data Preparation</h4>
+                                <div class="status-indicator idle">Idle</div>
+                                <p>Feature engineering & validation</p>
+                            </div>
+                            <div class="status-card" id="training-status">
+                                <h4>2. Model Training</h4>
+                                <div class="status-indicator idle">Idle</div>
+                                <p>AutoML with hyperparameter tuning</p>
+                            </div>
+                            <div class="status-card" id="validation-status">
+                                <h4>3. Model Validation</h4>
+                                <div class="status-indicator idle">Idle</div>
+                                <p>Performance metrics & testing</p>
+                            </div>
+                            <div class="status-card" id="deployment-status">
+                                <h4>4. Deployment</h4>
+                                <div class="status-indicator idle">Idle</div>
+                                <p>Container deployment to ACI</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-controls">
+                            <button id="start-pipeline" class="pipeline-btn primary">🚀 Start Pipeline</button>
+                            <button id="stop-pipeline" class="pipeline-btn secondary">⏹️ Stop</button>
+                            <button id="view-logs" class="pipeline-btn">📝 View Logs</button>
+                        </div>
+                    </div>
+
+                    <div class="model-metrics">
+                        <h3>Model Performance Metrics</h3>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <h4>Accuracy</h4>
+                                <div class="metric-value" id="accuracy-metric">0.00%</div>
+                                <canvas id="accuracy-chart" width="100" height="60"></canvas>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Precision</h4>
+                                <div class="metric-value" id="precision-metric">0.00%</div>
+                                <canvas id="precision-chart" width="100" height="60"></canvas>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Recall</h4>
+                                <div class="metric-value" id="recall-metric">0.00%</div>
+                                <canvas id="recall-chart" width="100" height="60"></canvas>
+                            </div>
+                            <div class="metric-card">
+                                <h4>F1 Score</h4>
+                                <div class="metric-value" id="f1-metric">0.00%</div>
+                                <canvas id="f1-chart" width="100" height="60"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pipeline Logs -->
+                <div class="pipeline-logs" id="pipeline-logs">
+                    <h3>Pipeline Logs</h3>
+                    <div class="log-console" id="log-console">
+                        <p class="log-entry info">[INFO] Pipeline ready to start...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Lake Demo Section -->
+        <section id="data-lake" class="section bg-light">
+            <div class="container">
+                <h2>🏞️ Data Lake vs Data Warehouse</h2>
+                <div class="lake-vs-warehouse">
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspect</th>
+                                    <th>Data Warehouse</th>
+                                    <th>Data Lake</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Data Structure</td>
+                                    <td>Structured (Schema-on-Write)</td>
+                                    <td>All types (Schema-on-Read)</td>
+                                </tr>
+                                <tr>
+                                    <td>Processing</td>
+                                    <td>ETL (Extract-Transform-Load)</td>
+                                    <td>ELT (Extract-Load-Transform)</td>
+                                </tr>
+                                <tr>
+                                    <td>Storage Cost</td>
+                                    <td>Higher ($$$)</td>
+                                    <td>Lower ($)</td>
+                                </tr>
+                                <tr>
+                                    <td>Query Performance</td>
+                                    <td>Fast (optimized)</td>
+                                    <td>Variable (depends on processing)</td>
+                                </tr>
+                                <tr>
+                                    <td>Use Cases</td>
+                                    <td>Business reporting, BI</td>
+                                    <td>ML, advanced analytics, exploration</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interactive Data Processing Demo</h3>
+                        <div class="demo-controls">
+                            <button id="simulate-etl" class="demo-btn warehouse">Simulate ETL (Warehouse)</button>
+                            <button id="simulate-elt" class="demo-btn lake">Simulate ELT (Lake)</button>
+                        </div>
+                        
+                        <div class="processing-visualization">
+                            <div class="data-flow" id="data-flow">
+                                <!-- Animated data flow will be inserted here -->
+                            </div>
+                            <div class="processing-stats" id="processing-stats">
+                                <div class="stat">
+                                    <label>Processing Time:</label>
+                                    <span id="processing-time">0s</span>
+                                </div>
+                                <div class="stat">
+                                    <label>Data Volume:</label>
+                                    <span id="data-volume">0 GB</span>
+                                </div>
+                                <div class="stat">
+                                    <label>Cost:</label>
+                                    <span id="processing-cost">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-time Analytics Section -->
+        <section id="streaming" class="section">
+            <div class="container">
+                <h2>⚡ Real-time Data Streaming</h2>
+                <div class="streaming-demo">
+                    <div class="stream-controls">
+                        <h3>Event Stream Simulator</h3>
+                        <div class="controls">
+                            <button id="start-stream" class="stream-btn">▶️ Start Stream</button>
+                            <button id="pause-stream" class="stream-btn">⏸️ Pause</button>
+                            <button id="stop-stream" class="stream-btn">⏹️ Stop</button>
+                            <div class="stream-rate">
+                                <label>Events/sec:</label>
+                                <input type="range" id="event-rate" min="1" max="100" value="10">
+                                <span id="rate-display">10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="streaming-dashboard">
+                        <div class="stream-metrics">
+                            <div class="metric-box">
+                                <h4>Total Events</h4>
+                                <div class="big-number" id="total-events">0</div>
+                            </div>
+                            <div class="metric-box">
+                                <h4>Events/Second</h4>
+                                <div class="big-number" id="events-per-second">0</div>
+                            </div>
+                            <div class="metric-box">
+                                <h4>Processing Lag</h4>
+                                <div class="big-number" id="processing-lag">0ms</div>
+                            </div>
+                        </div>
+
+                        <div class="stream-chart">
+                            <canvas id="streaming-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="event-feed">
+                        <h4>Live Event Feed</h4>
+                        <div class="event-log" id="event-log">
+                            <!-- Live events will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Azure Integration Section -->
+        <section id="azure-integration" class="section bg-light">
+            <div class="container">
+                <h2>🔗 Azure Services Integration</h2>
+                <div class="integration-demo">
+                    <div class="service-orchestration">
+                        <h3>Service Orchestration Flow</h3>
+                        <div class="orchestration-board">
+                            <div class="service-box" data-service="data-factory">
+                                <h4>Azure Data Factory</h4>
+                                <div class="service-status inactive">Inactive</div>
+                                <button class="trigger-btn" data-action="start-ingestion">Start Ingestion</button>
+                            </div>
+                            <div class="service-box" data-service="synapse">
+                                <h4>Synapse Analytics</h4>
+                                <div class="service-status inactive">Inactive</div>
+                                <button class="trigger-btn" data-action="process-data">Process Data</button>
+                            </div>
+                            <div class="service-box" data-service="ml">
+                                <h4>Azure ML</h4>
+                                <div class="service-status inactive">Inactive</div>
+                                <button class="trigger-btn" data-action="train-model">Train Model</button>
+                            </div>
+                            <div class="service-box" data-service="powerbi">
+                                <h4>Power BI</h4>
+                                <div class="service-status inactive">Inactive</div>
+                                <button class="trigger-btn" data-action="update-dashboard">Update Dashboard</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-calculator">
+                        <h3>💰 Azure Cost Calculator</h3>
+                        <div class="calculator-form">
+                            <div class="input-group">
+                                <label>Data Volume (GB/month):</label>
+                                <input type="number" id="data-volume-input" value="1000" min="1">
+                            </div>
+                            <div class="input-group">
+                                <label>Processing Hours/month:</label>
+                                <input type="number" id="processing-hours" value="100" min="1">
+                            </div>
+                            <div class="input-group">
+                                <label>Users:</label>
+                                <input type="number" id="user-count" value="10" min="1">
+                            </div>
+                            <button id="calculate-cost" class="calc-btn">Calculate Cost</button>
+                        </div>
+                        
+                        <div class="cost-breakdown" id="cost-breakdown">
+                            <div class="cost-item">
+                                <span>Data Lake Storage:</span>
+                                <span class="cost-value" id="storage-cost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Synapse Analytics:</span>
+                                <span class="cost-value" id="synapse-cost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Azure ML:</span>
+                                <span class="cost-value" id="ml-cost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Power BI:</span>
+                                <span class="cost-value" id="powerbi-cost">$0</span>
+                            </div>
+                            <div class="cost-total">
+                                <span>Total Monthly Cost:</span>
+                                <span class="cost-value" id="total-cost">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Phase Transition -->
+        <section id="phase-transition" class="section bg-dark">
+            <div class="container">
+                <h2>🎯 Phase 2 Complete - Ready for AI?</h2>
+                <div class="completion-summary">
+                    <div class="skills-gained">
+                        <h3>✅ Skills Mastered</h3>
+                        <ul>
+                            <li>Cloud-native data architecture</li>
+                            <li>MLOps pipeline automation</li>
+                            <li>Real-time data streaming</li>
+                            <li>Azure services integration</li>
+                            <li>Modern ELT processes</li>
+                            <li>Cost optimization strategies</li>
+                        </ul>
+                    </div>
+                    <div class="next-phase-preview">
+                        <h3>🔮 Coming Next: Phase 3</h3>
+                        <p>AI-Driven Data Systems</p>
+                        <ul>
+                            <li>🔍 Vector databases & semantic search</li>
+                            <li>🕸️ Graph databases & knowledge graphs</li>
+                            <li>🤖 AI agents & automated workflows</li>
+                            <li>🧠 Memory systems (short/medium/long-term)</li>
+                        </ul>
+                        <a href="../../phase3-ai-driven/vector-search/index.html" class="next-phase-btn">
+                            Continue to Phase 3 →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Data Engineering Journey - Phase 2: Modern Data Engineering & MLOps</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/modern-main.js"></script>
+</body>
+</html>

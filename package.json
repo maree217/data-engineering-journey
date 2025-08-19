@@ -1,0 +1,60 @@
+{
+  "name": "data-engineering-journey",
+  "version": "1.0.0",
+  "description": "Complete hands-on course: Traditional Data → Modern Engineering → AI-Driven Systems",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run phase1\" \"npm run phase2\" \"npm run phase3\" \"npm run jupyter\"",
+    "phase1": "cd phase1-traditional/html-dashboard && live-server --port=3000 --no-browser",
+    "phase2": "cd phase2-modern/mlops-pipeline && live-server --port=3001 --no-browser", 
+    "phase3": "cd phase3-ai-driven/vector-search && live-server --port=3002 --no-browser",
+    "jupyter": "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root",
+    "dev": "npm start",
+    "build": "echo 'Building static assets...' && npm run build:phase1 && npm run build:phase2 && npm run build:phase3",
+    "build:phase1": "echo 'Phase 1 built (static HTML)'",
+    "build:phase2": "echo 'Phase 2 built (static HTML)'", 
+    "build:phase3": "echo 'Phase 3 built (static HTML)'",
+    "test": "echo 'Running course validation tests...' && python scripts/validate_course.py",
+    "setup": "bash .devcontainer/setup.sh",
+    "clean": "rm -rf data/exports/* data/logs/*",
+    "generate-data": "python scripts/data_generator.py",
+    "validate": "python scripts/validate_course.py"
+  },
+  "keywords": [
+    "data-engineering",
+    "machine-learning", 
+    "ai",
+    "vector-database",
+    "knowledge-graphs",
+    "mlops",
+    "azure",
+    "education",
+    "hands-on",
+    "interactive"
+  ],
+  "author": "Data Engineering Course",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "d3": "^7.8.0",
+    "vis-network": "^9.1.0",
+    "mermaid": "^10.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "live-server": "^1.2.2",
+    "nodemon": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/data-ai-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/data-ai-course/issues"
+  },
+  "homepage": "https://github.com/your-username/data-ai-course#readme"
+}

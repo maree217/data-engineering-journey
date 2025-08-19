@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering Journey - Phase 1: Traditional Data</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1>Data Engineering Journey</h1>
+                <ul class="nav-menu">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#data-types">Data Types</a></li>
+                    <li><a href="#storage">Storage</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#visualization">Visualization</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Phase 1: Traditional Data Engineering</h1>
+                <p>Discover the fundamentals of data, storage, and analysis in traditional enterprise environments</p>
+                <button id="start-journey" class="cta-button">Start Your Journey</button>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>What is Data & Why Do Organizations Need It?</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>📊 Business Intelligence</h3>
+                        <p>Make informed decisions based on historical trends and patterns</p>
+                        <ul>
+                            <li>Sales performance tracking</li>
+                            <li>Customer behavior analysis</li>
+                            <li>Market trend identification</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>📋 Operational Efficiency</h3>
+                        <p>Streamline processes and reduce operational costs</p>
+                        <ul>
+                            <li>Inventory management</li>
+                            <li>Supply chain optimization</li>
+                            <li>Resource allocation</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>📈 Competitive Advantage</h3>
+                        <p>Stay ahead of competitors through data-driven insights</p>
+                        <ul>
+                            <li>Predictive analytics</li>
+                            <li>Customer segmentation</li>
+                            <li>Risk assessment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Types Section -->
+        <section id="data-types" class="section bg-light">
+            <div class="container">
+                <h2>Understanding Different Types of Data</h2>
+                <div class="data-types-container">
+                    <div class="data-type-tabs">
+                        <button class="tab-button active" data-type="structured">Structured Data</button>
+                        <button class="tab-button" data-type="unstructured">Unstructured Data</button>
+                        <button class="tab-button" data-type="semi-structured">Semi-Structured Data</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div id="structured" class="tab-panel active">
+                            <h3>Structured Data</h3>
+                            <p>Highly organized data that fits neatly into tables with rows and columns</p>
+                            <div class="example-container">
+                                <h4>Example: Customer Database</h4>
+                                <table id="customer-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Age</th>
+                                            <th>City</th>
+                                            <th>Purchase Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="customer-data">
+                                        <!-- Data populated by JavaScript -->
+                                    </tbody>
+                                </table>
+                                <button id="add-customer">Add Random Customer</button>
+                            </div>
+                        </div>
+                        
+                        <div id="unstructured" class="tab-panel">
+                            <h3>Unstructured Data</h3>
+                            <p>Data that doesn't have a predefined format or organization</p>
+                            <div class="grid-2">
+                                <div class="unstructured-examples">
+                                    <h4>Examples Include:</h4>
+                                    <ul>
+                                        <li>📄 Text documents and emails</li>
+                                        <li>🖼️ Images and videos</li>
+                                        <li>🎵 Audio files</li>
+                                        <li>📱 Social media posts</li>
+                                        <li>📝 Customer reviews</li>
+                                    </ul>
+                                </div>
+                                <div class="text-analysis">
+                                    <h4>Sample Text Analysis</h4>
+                                    <textarea id="text-input" placeholder="Enter some text to analyze...">Our new product launch exceeded expectations. Customer feedback has been overwhelmingly positive, with 95% satisfaction rate. The marketing campaign generated significant buzz on social media platforms.</textarea>
+                                    <button id="analyze-text">Analyze Text</button>
+                                    <div id="text-results"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="semi-structured" class="tab-panel">
+                            <h3>Semi-Structured Data</h3>
+                            <p>Data with some organizational structure but not rigid table format</p>
+                            <div class="grid-2">
+                                <div class="json-example">
+                                    <h4>JSON Example:</h4>
+                                    <pre id="json-data"></pre>
+                                </div>
+                                <div class="xml-example">
+                                    <h4>XML Example:</h4>
+                                    <pre id="xml-data"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage Section -->
+        <section id="storage" class="section">
+            <div class="container">
+                <h2>Traditional Data Storage Systems</h2>
+                <div class="storage-evolution">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">1</div>
+                            <div class="timeline-content">
+                                <h3>File Systems (1960s-1970s)</h3>
+                                <p>Simple file-based storage with hierarchical directory structures</p>
+                                <div class="tech-stack">
+                                    <span class="tech">Flat Files</span>
+                                    <span class="tech">CSV</span>
+                                    <span class="tech">Text Files</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">2</div>
+                            <div class="timeline-content">
+                                <h3>Relational Databases (1970s-1990s)</h3>
+                                <p>Structured data with relationships, ACID properties, and SQL</p>
+                                <div class="tech-stack">
+                                    <span class="tech">MySQL</span>
+                                    <span class="tech">PostgreSQL</span>
+                                    <span class="tech">Oracle</span>
+                                    <span class="tech">SQL Server</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">3</div>
+                            <div class="timeline-content">
+                                <h3>Data Warehouses (1990s-2000s)</h3>
+                                <p>Centralized repositories for business intelligence and reporting</p>
+                                <div class="tech-stack">
+                                    <span class="tech">Teradata</span>
+                                    <span class="tech">IBM DB2</span>
+                                    <span class="tech">Amazon Redshift</span>
+                                    <span class="tech">Azure Synapse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Database Schema -->
+                <div class="database-schema">
+                    <h3>Interactive Database Schema Example</h3>
+                    <div id="schema-diagram"></div>
+                    <div class="schema-controls">
+                        <button id="show-customers">Show Customers Table</button>
+                        <button id="show-orders">Show Orders Table</button>
+                        <button id="show-products">Show Products Table</button>
+                        <button id="show-relationships">Show Relationships</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analysis" class="section bg-light">
+            <div class="container">
+                <h2>Traditional Data Analysis</h2>
+                <div class="analysis-tools">
+                    <div class="grid-2">
+                        <div class="sql-playground">
+                            <h3>SQL Query Playground</h3>
+                            <div class="query-interface">
+                                <select id="predefined-queries">
+                                    <option value="">Select a predefined query...</option>
+                                    <option value="basic-select">Basic SELECT</option>
+                                    <option value="join-query">JOIN Query</option>
+                                    <option value="aggregation">Aggregation</option>
+                                    <option value="filtering">Filtering & Sorting</option>
+                                </select>
+                                <textarea id="sql-query" placeholder="-- Write your SQL query here
+SELECT * FROM customers 
+WHERE age > 25 
+ORDER BY purchase_amount DESC;"></textarea>
+                                <button id="run-query">Run Query</button>
+                                <div id="query-results"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="python-analysis">
+                            <h3>Python Data Analysis</h3>
+                            <div class="code-example">
+                                <pre><code id="python-code">import pandas as pd
+import numpy as np
+
+# Load data
+df = pd.read_csv('customer_data.csv')
+
+# Basic statistics
+print(df.describe())
+
+# Group by city
+city_analysis = df.groupby('city')['purchase_amount'].agg([
+    'mean', 'sum', 'count'
+])
+
+print(city_analysis)</code></pre>
+                                <button id="run-python">Simulate Python Analysis</button>
+                                <div id="python-results"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visualization Section -->
+        <section id="visualization" class="section">
+            <div class="container">
+                <h2>Data Visualization & Business Intelligence</h2>
+                <div class="visualization-demo">
+                    <div class="dashboard-controls">
+                        <h3>Interactive Dashboard Demo</h3>
+                        <div class="controls">
+                            <button id="refresh-data">🔄 Refresh Data</button>
+                            <select id="chart-type">
+                                <option value="bar">Bar Chart</option>
+                                <option value="line">Line Chart</option>
+                                <option value="pie">Pie Chart</option>
+                                <option value="doughnut">Doughnut Chart</option>
+                            </select>
+                            <select id="data-metric">
+                                <option value="sales">Sales by Region</option>
+                                <option value="customers">Customers by Age Group</option>
+                                <option value="products">Product Performance</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="charts-container">
+                        <div class="chart-wrapper">
+                            <canvas id="main-chart"></canvas>
+                        </div>
+                        <div class="kpi-cards">
+                            <div class="kpi-card">
+                                <h4>Total Revenue</h4>
+                                <span id="kpi-revenue">$0</span>
+                            </div>
+                            <div class="kpi-card">
+                                <h4>Total Customers</h4>
+                                <span id="kpi-customers">0</span>
+                            </div>
+                            <div class="kpi-card">
+                                <h4>Avg Order Value</h4>
+                                <span id="kpi-aov">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power BI Integration Example -->
+                <div class="powerbi-section">
+                    <h3>Power BI Integration</h3>
+                    <p>In a real scenario, you would embed Power BI reports here:</p>
+                    <div class="powerbi-placeholder">
+                        <div class="placeholder-content">
+                            <h4>📊 Power BI Report</h4>
+                            <p>Sales Performance Dashboard</p>
+                            <p>• Connect to Azure SQL Database</p>
+                            <p>• Create relationships between tables</p>
+                            <p>• Build interactive visualizations</p>
+                            <p>• Set up automatic data refresh</p>
+                            <button class="placeholder-button">Open in Power BI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps Section -->
+        <section id="next-steps" class="section bg-dark">
+            <div class="container">
+                <h2>🚀 What's Next?</h2>
+                <div class="grid-3">
+                    <div class="next-step-card">
+                        <h3>Week 2: SQL Deep Dive</h3>
+                        <ul>
+                            <li>Advanced SQL queries</li>
+                            <li>Database design principles</li>
+                            <li>Azure SQL Database setup</li>
+                        </ul>
+                        <button class="btn-outline">Continue Learning</button>
+                    </div>
+                    <div class="next-step-card">
+                        <h3>Week 3: Python Analytics</h3>
+                        <ul>
+                            <li>Pandas for data manipulation</li>
+                            <li>NumPy for numerical computing</li>
+                            <li>Matplotlib for visualization</li>
+                        </ul>
+                        <button class="btn-outline">Explore Python</button>
+                    </div>
+                    <div class="next-step-card">
+                        <h3>Week 4: Power BI Mastery</h3>
+                        <ul>
+                            <li>Report building</li>
+                            <li>DAX formulas</li>
+                            <li>Dashboard design</li>
+                        </ul>
+                        <button class="btn-outline">Build Dashboards</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Data Engineering Journey - Phase 1: Traditional Data Systems</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

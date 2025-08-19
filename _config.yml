@@ -1,0 +1,138 @@
+# GitHub Pages configuration for Data Engineering Journey
+
+# Site settings
+title: "Data Engineering Journey"
+description: "Complete hands-on course: Traditional Data → Modern Engineering → AI-Driven Systems"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://your-username.github.io" # the base hostname & protocol for your site
+
+# Course information
+course:
+  name: "Data Engineering Journey"
+  subtitle: "From Traditional to AI-Driven Systems"
+  version: "1.0.0"
+  phases: 3
+  duration: "12 weeks"
+  
+# Author information
+author:
+  name: "Data Engineering Course"
+  email: "support@dataengineering.course"
+  github: "your-username"
+
+# Social media
+social:
+  github: "your-username/data-ai-course"
+  discussions: "https://github.com/your-username/data-ai-course/discussions"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  phases:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude files from processing
+exclude:
+  - .devcontainer/
+  - scripts/
+  - data/
+  - node_modules/
+  - .gitignore
+  - package.json
+  - package-lock.json
+  - requirements.txt
+  - "*.py"
+  - "*.sh"
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LAUNCH_GUIDE.md
+
+# Include specific files
+include:
+  - phase1-traditional/
+  - phase2-modern/
+  - phase3-ai-driven/
+  - assets/
+  - _config.yml
+
+# SEO settings
+seo:
+  name: "Data Engineering Journey"
+  description: "Complete hands-on course for engineering graduates: Traditional Data → Modern Engineering → AI-Driven Systems using GitHub Codespaces, Azure, and AI tools."
+  keywords: "data engineering, machine learning, AI, vector database, knowledge graphs, MLOps, Azure, education, hands-on, interactive"
+  
+# Analytics (optional)
+# google_analytics: "G-XXXXXXXXXX"
+
+# Custom variables
+course_features:
+  - "Interactive demonstrations"
+  - "GitHub Codespaces ready"
+  - "Azure integration"
+  - "AI-powered learning"
+  - "Hands-on projects"
+  - "Progressive complexity"
+
+technologies:
+  phase1:
+    - "SQL"
+    - "Python"
+    - "Pandas"
+    - "Chart.js"
+    - "Power BI concepts"
+  phase2:
+    - "Azure"
+    - "Docker"
+    - "MLOps"
+    - "Streaming analytics"
+    - "Cloud architecture"
+  phase3:
+    - "Vector databases"
+    - "Neo4j"
+    - "OpenAI"
+    - "LangChain"
+    - "AI agents"
+
+# Navigation
+navigation:
+  - name: "Overview"
+    url: "#overview"
+  - name: "Phases"
+    url: "#phases"
+  - name: "Features"
+    url: "#features"
+  - name: "Launch"
+    url: "#launch"
+
+# Course phases metadata
+phase_metadata:
+  phase1:
+    title: "Traditional Data Engineering"
+    duration: "Weeks 1-4"
+    icon: "🏛️"
+    description: "Master the fundamentals of data systems, SQL databases, and business intelligence"
+    path: "phase1-traditional/html-dashboard/index.html"
+  phase2:
+    title: "Modern Data Engineering"
+    duration: "Weeks 5-8"
+    icon: "☁️"
+    description: "Build cloud-native data architectures, MLOps pipelines, and real-time systems"
+    path: "phase2-modern/mlops-pipeline/index.html"
+  phase3:
+    title: "AI-Driven Data Systems"
+    duration: "Weeks 9-12"
+    icon: "🤖"
+    description: "Create intelligent data systems with vector databases, knowledge graphs, and AI agents"
+    path: "phase3-ai-driven/vector-search/index.html"

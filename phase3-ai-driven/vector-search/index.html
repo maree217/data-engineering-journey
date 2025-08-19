@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 3: AI-Driven Data Systems</title>
+    <link rel="stylesheet" href="../assets/css/ai-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <nav class="phase-nav">
+        <div class="nav-container">
+            <div class="phase-indicator">
+                <a href="../../phase1-traditional/html-dashboard/index.html" class="phase-link completed">Phase 1</a>
+                <a href="../../phase2-modern/mlops-pipeline/index.html" class="phase-link completed">Phase 2</a>
+                <a href="#" class="phase-link current">Phase 3</a>
+            </div>
+            <h1>AI-Driven Data Systems</h1>
+        </div>
+    </nav>
+
+    <header class="hero-ai">
+        <div class="container">
+            <h1>Phase 3: AI-Driven Data Systems</h1>
+            <p>Vector Databases, Graph Knowledge, AI Agents & Memory Systems</p>
+            <div class="ai-badges">
+                <span class="ai-badge vector">🔍 Vector Search</span>
+                <span class="ai-badge graph">🕸️ Knowledge Graphs</span>
+                <span class="ai-badge agents">🤖 AI Agents</span>
+                <span class="ai-badge memory">🧠 Memory Systems</span>
+            </div>
+        </div>
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- AI Revolution Section -->
+        <section id="ai-revolution" class="section">
+            <div class="container">
+                <h2>🚀 The AI Data Revolution</h2>
+                <div class="revolution-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot traditional"></div>
+                        <div class="timeline-content">
+                            <h3>Traditional Era</h3>
+                            <p>Structured data in relational databases</p>
+                            <div class="era-features">
+                                <span>🗃️ SQL Queries</span>
+                                <span>📊 Fixed Schemas</span>
+                                <span>🔍 Keyword Search</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot modern"></div>
+                        <div class="timeline-content">
+                            <h3>Modern Era</h3>
+                            <p>Cloud-native with unstructured data</p>
+                            <div class="era-features">
+                                <span>☁️ Cloud Scale</span>
+                                <span>🔄 Real-time Streaming</span>
+                                <span>🤖 Basic ML Models</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item active">
+                        <div class="timeline-dot ai"></div>
+                        <div class="timeline-content">
+                            <h3>AI-Driven Era</h3>
+                            <p>Semantic understanding & intelligent agents</p>
+                            <div class="era-features">
+                                <span>🧠 Vector Embeddings</span>
+                                <span>🕸️ Knowledge Graphs</span>
+                                <span>🤖 Autonomous Agents</span>
+                                <span>💭 Memory Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vector Database Section -->
+        <section id="vector-database" class="section bg-light">
+            <div class="container">
+                <h2>🔍 Vector Databases & Semantic Search</h2>
+                
+                <div class="concept-explanation">
+                    <div class="concept-card">
+                        <h3>What are Vector Embeddings?</h3>
+                        <p>High-dimensional numerical representations of data that capture semantic meaning</p>
+                        <div class="embedding-demo">
+                            <div class="text-to-vector">
+                                <div class="text-input">"Machine learning is powerful"</div>
+                                <div class="arrow">→</div>
+                                <div class="vector-output">[0.2, -0.8, 0.5, 0.1, ...]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vector-playground">
+                    <h3>Interactive Vector Search Demo</h3>
+                    <div class="search-interface">
+                        <div class="search-box">
+                            <input type="text" id="semantic-search" placeholder="Search semantically: 'powerful AI algorithms', 'data processing', 'machine intelligence'...">
+                            <button id="search-btn">🔍 Search</button>
+                        </div>
+                        
+                        <div class="search-options">
+                            <label>
+                                <input type="checkbox" id="similarity-threshold" checked>
+                                Show similarity scores
+                            </label>
+                            <label>
+                                Search type:
+                                <select id="search-type">
+                                    <option value="semantic">Semantic (Vector)</option>
+                                    <option value="keyword">Traditional (Keyword)</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="search-results" id="search-results">
+                        <div class="results-placeholder">
+                            <p>Enter a search query to see semantic similarity in action</p>
+                            <p class="hint">Try: "artificial intelligence", "data analysis", "machine learning algorithms"</p>
+                        </div>
+                    </div>
+
+                    <div class="vector-visualization">
+                        <h4>Vector Space Visualization</h4>
+                        <div class="vector-space" id="vector-space">
+                            <!-- 3D-like visualization of vectors -->
+                        </div>
+                        <div class="dimension-controls">
+                            <button id="rotate-vectors">🔄 Rotate View</button>
+                            <button id="cluster-vectors">🎯 Show Clusters</button>
+                            <button id="reset-vectors">↺ Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PostgreSQL + pgvector Integration -->
+                <div class="database-integration">
+                    <h3>PostgreSQL + pgvector Integration</h3>
+                    <div class="integration-demo">
+                        <div class="sql-example">
+                            <h4>Traditional SQL vs Vector SQL</h4>
+                            <div class="code-comparison">
+                                <div class="code-block traditional">
+                                    <h5>Traditional Search</h5>
+                                    <pre><code>SELECT title, content 
+FROM documents 
+WHERE content ILIKE '%machine learning%'
+ORDER BY created_at DESC;</code></pre>
+                                </div>
+                                
+                                <div class="code-block vector">
+                                    <h5>Vector Similarity Search</h5>
+                                    <pre><code>SELECT title, content,
+  1 - (embedding &lt;=&gt; query_embedding) as similarity
+FROM documents 
+WHERE 1 - (embedding &lt;=&gt; query_embedding) > 0.8
+ORDER BY embedding &lt;=&gt; query_embedding
+LIMIT 10;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="performance-comparison">
+                            <h4>Performance Comparison</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-card">
+                                    <h5>Traditional Search</h5>
+                                    <div class="metric-value slow">500ms</div>
+                                    <p>Exact keyword matches only</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h5>Vector Search</h5>
+                                    <div class="metric-value fast">50ms</div>
+                                    <p>Semantic understanding</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h5>Relevance Score</h5>
+                                    <div class="metric-value excellent">95%</div>
+                                    <p>Context-aware results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Graphs Section -->
+        <section id="knowledge-graphs" class="section">
+            <div class="container">
+                <h2>🕸️ Knowledge Graphs & Relationships</h2>
+                
+                <div class="graph-explanation">
+                    <div class="explanation-grid">
+                        <div class="explanation-card">
+                            <h3>Traditional Relationships</h3>
+                            <p>Fixed foreign key relationships in rigid table structures</p>
+                            <div class="relationship-example traditional-rel">
+                                <div class="table">Users</div>
+                                <div class="foreign-key">→ user_id</div>
+                                <div class="table">Orders</div>
+                            </div>
+                        </div>
+                        
+                        <div class="explanation-card">
+                            <h3>Graph Relationships</h3>
+                            <p>Dynamic, labeled relationships with rich properties and context</p>
+                            <div class="relationship-example graph-rel">
+                                <div class="node">User</div>
+                                <div class="relationship">PURCHASED_WITH_DISCOUNT</div>
+                                <div class="node">Product</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-graph">
+                    <h3>Interactive Knowledge Graph</h3>
+                    <div class="graph-controls">
+                        <div class="control-group">
+                            <button id="add-customer" class="graph-btn">👤 Add Customer</button>
+                            <button id="add-product" class="graph-btn">📦 Add Product</button>
+                            <button id="add-relationship" class="graph-btn">🔗 Add Relationship</button>
+                        </div>
+                        <div class="control-group">
+                            <button id="find-patterns" class="graph-btn pattern">🔍 Find Patterns</button>
+                            <button id="recommend" class="graph-btn recommend">💡 AI Recommendations</button>
+                            <button id="reset-graph" class="graph-btn reset">🔄 Reset Graph</button>
+                        </div>
+                    </div>
+
+                    <div class="graph-container">
+                        <div id="knowledge-graph" class="graph-network"></div>
+                        <div class="graph-info" id="graph-info">
+                            <h4>Graph Statistics</h4>
+                            <div class="graph-stats">
+                                <div class="stat">
+                                    <label>Nodes:</label>
+                                    <span id="node-count">0</span>
+                                </div>
+                                <div class="stat">
+                                    <label>Relationships:</label>
+                                    <span id="edge-count">0</span>
+                                </div>
+                                <div class="stat">
+                                    <label>Communities:</label>
+                                    <span id="community-count">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cypher Query Playground -->
+                <div class="cypher-playground">
+                    <h3>Cypher Query Playground</h3>
+                    <div class="query-interface">
+                        <div class="query-examples">
+                            <h4>Example Queries</h4>
+                            <div class="example-queries">
+                                <button class="example-query" data-query="MATCH (c:Customer)-[:PURCHASED]->(p:Product) RETURN c.name, p.name">
+                                    Find all customer purchases
+                                </button>
+                                <button class="example-query" data-query="MATCH (c:Customer)-[:PURCHASED]->(p:Product)<-[:PURCHASED]-(c2:Customer) WHERE c <> c2 RETURN c2.name as recommendation">
+                                    Recommend customers with similar purchases
+                                </button>
+                                <button class="example-query" data-query="MATCH path = (c:Customer)-[:PURCHASED*2..3]-(p:Product) RETURN path">
+                                    Find complex purchase patterns
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="query-editor">
+                            <textarea id="cypher-query" placeholder="Enter your Cypher query here...">MATCH (n) RETURN n LIMIT 25</textarea>
+                            <button id="run-cypher">▶️ Run Query</button>
+                        </div>
+                        
+                        <div class="query-results" id="cypher-results">
+                            <p>Query results will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Agents Section -->
+        <section id="ai-agents" class="section bg-light">
+            <div class="container">
+                <h2>🤖 AI Agents & Automated Workflows</h2>
+                
+                <div class="agents-overview">
+                    <div class="agent-types">
+                        <div class="agent-card data-analyst">
+                            <h3>📊 Data Analyst Agent</h3>
+                            <p>Automatically analyzes data patterns and generates insights</p>
+                            <div class="agent-capabilities">
+                                <span>Pattern Recognition</span>
+                                <span>Statistical Analysis</span>
+                                <span>Anomaly Detection</span>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-card data-engineer">
+                            <h3>🔧 Data Engineer Agent</h3>
+                            <p>Manages data pipelines and optimization tasks</p>
+                            <div class="agent-capabilities">
+                                <span>Pipeline Monitoring</span>
+                                <span>Performance Optimization</span>
+                                <span>Error Recovery</span>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-card research-agent">
+                            <h3>🔬 Research Agent</h3>
+                            <p>Gathers and synthesizes information from multiple sources</p>
+                            <div class="agent-capabilities">
+                                <span>Web Research</span>
+                                <span>Document Analysis</span>
+                                <span>Report Generation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agent-simulation">
+                    <h3>AI Agent Workflow Simulation</h3>
+                    <div class="workflow-designer">
+                        <div class="agent-controls">
+                            <button id="start-analysis" class="agent-btn primary">🚀 Start Data Analysis</button>
+                            <button id="simulate-research" class="agent-btn secondary">🔍 Research Task</button>
+                            <button id="optimize-pipeline" class="agent-btn tertiary">⚡ Pipeline Optimization</button>
+                        </div>
+                        
+                        <div class="workflow-visualization">
+                            <div class="workflow-steps" id="workflow-steps">
+                                <!-- Dynamic workflow steps will be inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div class="agent-output" id="agent-output">
+                            <h4>Agent Output</h4>
+                            <div class="output-console" id="agent-console">
+                                <p class="console-entry">🤖 AI Agent ready for tasks...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Agent Collaboration -->
+                <div class="multi-agent-system">
+                    <h3>Multi-Agent Collaboration</h3>
+                    <div class="collaboration-demo">
+                        <div class="agents-network">
+                            <div class="agent-node coordinator" data-agent="coordinator">
+                                <h4>🎯 Coordinator</h4>
+                                <div class="agent-status idle">Idle</div>
+                            </div>
+                            <div class="agent-node" data-agent="collector">
+                                <h4>📥 Data Collector</h4>
+                                <div class="agent-status idle">Idle</div>
+                            </div>
+                            <div class="agent-node" data-agent="processor">
+                                <h4>⚙️ Data Processor</h4>
+                                <div class="agent-status idle">Idle</div>
+                            </div>
+                            <div class="agent-node" data-agent="analyst">
+                                <h4>📈 Analyst</h4>
+                                <div class="agent-status idle">Idle</div>
+                            </div>
+                            <div class="agent-node" data-agent="reporter">
+                                <h4>📄 Reporter</h4>
+                                <div class="agent-status idle">Idle</div>
+                            </div>
+                        </div>
+                        
+                        <div class="collaboration-controls">
+                            <button id="start-collaboration" class="collab-btn">🤝 Start Collaboration</button>
+                            <button id="pause-collaboration" class="collab-btn">⏸️ Pause</button>
+                            <button id="stop-collaboration" class="collab-btn">⏹️ Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Systems Section -->
+        <section id="memory-systems" class="section">
+            <div class="container">
+                <h2>🧠 Memory Systems: Short, Medium & Long-term</h2>
+                
+                <div class="memory-architecture">
+                    <div class="memory-types">
+                        <div class="memory-layer short-term">
+                            <h3>🔥 Short-term Memory</h3>
+                            <p>Current context, conversation state, immediate working data</p>
+                            <div class="memory-details">
+                                <div class="detail">
+                                    <strong>Duration:</strong> Minutes to Hours
+                                </div>
+                                <div class="detail">
+                                    <strong>Storage:</strong> Redis, In-Memory
+                                </div>
+                                <div class="detail">
+                                    <strong>Use Cases:</strong> Chat context, Active sessions
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="memory-layer medium-term">
+                            <h3>⏳ Medium-term Memory</h3>
+                            <p>Recent patterns, user preferences, learned behaviors</p>
+                            <div class="memory-details">
+                                <div class="detail">
+                                    <strong>Duration:</strong> Days to Weeks
+                                </div>
+                                <div class="detail">
+                                    <strong>Storage:</strong> Vector DB, Graph DB
+                                </div>
+                                <div class="detail">
+                                    <strong>Use Cases:</strong> User profiling, Recent patterns
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="memory-layer long-term">
+                            <h3>🏛️ Long-term Memory</h3>
+                            <p>Knowledge base, historical data, trained models</p>
+                            <div class="memory-details">
+                                <div class="detail">
+                                    <strong>Duration:</strong> Months to Years
+                                </div>
+                                <div class="detail">
+                                    <strong>Storage:</strong> Knowledge Graphs, Data Lakes
+                                </div>
+                                <div class="detail">
+                                    <strong>Use Cases:</strong> Domain knowledge, Historical analysis
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memory-simulation">
+                    <h3>Memory System Simulation</h3>
+                    <div class="simulation-interface">
+                        <div class="user-interaction">
+                            <h4>Simulate User Interaction</h4>
+                            <div class="interaction-form">
+                                <textarea id="user-input" placeholder="Enter user message or query...">I'm looking for machine learning courses that focus on deep learning and neural networks.</textarea>
+                                <button id="process-memory">🧠 Process Through Memory Layers</button>
+                            </div>
+                        </div>
+                        
+                        <div class="memory-processing">
+                            <div class="memory-stage" id="short-term-stage">
+                                <h4>Short-term Processing</h4>
+                                <div class="stage-content">
+                                    <div class="processing-status">Ready</div>
+                                    <div class="stage-output"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="memory-stage" id="medium-term-stage">
+                                <h4>Medium-term Analysis</h4>
+                                <div class="stage-content">
+                                    <div class="processing-status">Ready</div>
+                                    <div class="stage-output"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="memory-stage" id="long-term-stage">
+                                <h4>Long-term Knowledge</h4>
+                                <div class="stage-content">
+                                    <div class="processing-status">Ready</div>
+                                    <div class="stage-output"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="final-response" id="final-response">
+                            <h4>AI Response</h4>
+                            <div class="response-content">
+                                <p>Submit a user input to see how memory layers work together...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Analytics -->
+                <div class="memory-analytics">
+                    <h3>Memory Analytics Dashboard</h3>
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <h4>Memory Usage</h4>
+                            <canvas id="memory-usage-chart"></canvas>
+                        </div>
+                        <div class="analytics-card">
+                            <h4>Query Patterns</h4>
+                            <canvas id="query-patterns-chart"></canvas>
+                        </div>
+                        <div class="analytics-card">
+                            <h4>Response Accuracy</h4>
+                            <canvas id="accuracy-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration & Architecture Section -->
+        <section id="ai-architecture" class="section bg-light">
+            <div class="container">
+                <h2>🏗️ AI-Driven Data Architecture</h2>
+                
+                <div class="architecture-blueprint">
+                    <h3>Complete AI Data Stack</h3>
+                    <div class="architecture-layers">
+                        <div class="layer presentation">
+                            <h4>🖥️ Presentation Layer</h4>
+                            <div class="layer-components">
+                                <span>AI Chatbots</span>
+                                <span>Semantic Search UI</span>
+                                <span>Graph Visualizations</span>
+                            </div>
+                        </div>
+                        
+                        <div class="layer application">
+                            <h4>🤖 AI Application Layer</h4>
+                            <div class="layer-components">
+                                <span>Agent Orchestration</span>
+                                <span>Memory Management</span>
+                                <span>LLM Integration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="layer intelligence">
+                            <h4>🧠 Intelligence Layer</h4>
+                            <div class="layer-components">
+                                <span>Vector Embeddings</span>
+                                <span>Graph Algorithms</span>
+                                <span>Pattern Recognition</span>
+                            </div>
+                        </div>
+                        
+                        <div class="layer data">
+                            <h4>🗃️ AI-Enhanced Data Layer</h4>
+                            <div class="layer-components">
+                                <span>Vector Databases</span>
+                                <span>Knowledge Graphs</span>
+                                <span>Memory Stores</span>
+                            </div>
+                        </div>
+                        
+                        <div class="layer infrastructure">
+                            <h4>☁️ Cloud Infrastructure</h4>
+                            <div class="layer-components">
+                                <span>Azure OpenAI</span>
+                                <span>Cognitive Search</span>
+                                <span>Cosmos DB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation Roadmap -->
+                <div class="implementation-roadmap">
+                    <h3>Implementation Roadmap</h3>
+                    <div class="roadmap-timeline">
+                        <div class="roadmap-phase">
+                            <h4>Phase 1: Foundation (Week 1-2)</h4>
+                            <ul>
+                                <li>Set up PostgreSQL with pgvector</li>
+                                <li>Create vector embeddings pipeline</li>
+                                <li>Implement basic semantic search</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="roadmap-phase">
+                            <h4>Phase 2: Graph & Intelligence (Week 3-4)</h4>
+                            <ul>
+                                <li>Deploy Azure Cosmos DB with Gremlin</li>
+                                <li>Build knowledge graph from data</li>
+                                <li>Create graph-based recommendations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="roadmap-phase">
+                            <h4>Phase 3: Agents & Memory (Week 5-6)</h4>
+                            <ul>
+                                <li>Implement AI agent framework</li>
+                                <li>Build multi-layer memory system</li>
+                                <li>Create agent collaboration workflows</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="roadmap-phase">
+                            <h4>Phase 4: Production & Scale (Week 7-8)</h4>
+                            <ul>
+                                <li>Deploy to Azure with monitoring</li>
+                                <li>Implement performance optimization</li>
+                                <li>Add security & compliance features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Completion -->
+        <section id="completion" class="section bg-dark">
+            <div class="container">
+                <h2>🎓 Congratulations! Course Complete</h2>
+                <div class="completion-celebration">
+                    <div class="achievement-badges">
+                        <div class="badge traditional">
+                            <h3>🏛️ Traditional Data Master</h3>
+                            <p>SQL, Data Warehouses, Business Intelligence</p>
+                        </div>
+                        <div class="badge modern">
+                            <h3>☁️ Modern Engineer</h3>
+                            <p>Cloud Architecture, MLOps, Real-time Systems</p>
+                        </div>
+                        <div class="badge ai">
+                            <h3>🤖 AI Systems Architect</h3>
+                            <p>Vector DBs, Knowledge Graphs, AI Agents</p>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h3>🚀 Your AI-Driven Data Engineering Journey</h3>
+                        <div class="journey-stats">
+                            <div class="stat">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Phases Completed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Technologies Learned</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Hands-on Experience</div>
+                            </div>
+                        </div>
+                        
+                        <div class="career-paths">
+                            <h4>Career Paths Now Open</h4>
+                            <div class="career-options">
+                                <div class="career-card">
+                                    <h5>🏢 AI Data Engineer</h5>
+                                    <p>Build intelligent data pipelines and vector search systems</p>
+                                </div>
+                                <div class="career-card">
+                                    <h5>🧠 ML Ops Engineer</h5>
+                                    <p>Deploy and manage AI/ML systems at scale</p>
+                                </div>
+                                <div class="career-card">
+                                    <h5>🔬 AI Research Engineer</h5>
+                                    <p>Develop cutting-edge AI applications and solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="continue-learning">
+                            <h4>Continue Your Journey</h4>
+                            <div class="learning-resources">
+                                <a href="#" class="resource-link">📚 Advanced AI Patterns</a>
+                                <a href="#" class="resource-link">🏗️ Enterprise Architecture</a>
+                                <a href="#" class="resource-link">🔒 AI Security & Ethics</a>
+                                <a href="#" class="resource-link">📈 AI Business Strategy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ai-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🎯 Phase Navigation</h4>
+                    <ul>
+                        <li><a href="../../phase1-traditional/html-dashboard/index.html">Phase 1: Traditional Data</a></li>
+                        <li><a href="../../phase2-modern/mlops-pipeline/index.html">Phase 2: Modern Engineering</a></li>
+                        <li><a href="#">Phase 3: AI-Driven Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🛠️ Technologies Covered</h4>
+                    <ul>
+                        <li>PostgreSQL + pgvector</li>
+                        <li>Azure Cosmos DB</li>
+                        <li>OpenAI Embeddings</li>
+                        <li>Graph Databases</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🚀 What's Next?</h4>
+                    <ul>
+                        <li>Production Deployment</li>
+                        <li>Performance Optimization</li>
+                        <li>Advanced AI Patterns</li>
+                        <li>Enterprise Integration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Data Engineering Journey - From Traditional to AI-Driven Systems</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/ai-main.js"></script>
+</body>
+</html>

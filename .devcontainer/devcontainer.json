@@ -1,0 +1,110 @@
+{
+    "name": "Complete Data Engineering Journey - All Phases",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
+        },
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-vscode.vscode-json",
+                "ms-vscode.live-server",
+                "ms-vscode.azurecli",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "ms-toolsai.jupyter",
+                "ms-azuretools.vscode-azureresourcegroups",
+                "ms-vscode.powershell",
+                "bradlc.vscode-tailwindcss",
+                "formulahendry.auto-rename-tag",
+                "ms-vscode.vscode-postgres",
+                "GraphQL.vscode-graphql",
+                "Neo4j.cypher",
+                "ms-dotnettools.csharp",
+                "redhat.vscode-yaml",
+                "ms-vscode.makefile-tools"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.formatting.provider": "black",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": true
+                },
+                "liveServer.settings.donotShowInfoMsg": true,
+                "liveServer.settings.port": 3000,
+                "files.associations": {
+                    "*.cypher": "cypher",
+                    "*.cql": "cypher"
+                }
+            }
+        }
+    },
+
+    "forwardPorts": [3000, 3001, 3002, 8000, 8080, 8888, 5432, 7474, 7687, 1433, 6379],
+    "portsAttributes": {
+        "3000": {
+            "label": "Phase 1: Traditional Data Dashboard",
+            "onAutoForward": "openPreview"
+        },
+        "3001": {
+            "label": "Phase 2: Modern Data Engineering",
+            "onAutoForward": "notify"
+        },
+        "3002": {
+            "label": "Phase 3: AI-Driven Data Systems",
+            "onAutoForward": "notify"
+        },
+        "8888": {
+            "label": "Jupyter Lab - Data Analysis",
+            "onAutoForward": "notify"
+        },
+        "5432": {
+            "label": "PostgreSQL + pgvector",
+            "onAutoForward": "ignore"
+        },
+        "7474": {
+            "label": "Neo4j Browser",
+            "onAutoForward": "notify"
+        },
+        "7687": {
+            "label": "Neo4j Bolt Protocol",
+            "onAutoForward": "ignore"
+        },
+        "1433": {
+            "label": "SQL Server",
+            "onAutoForward": "ignore"
+        },
+        "6379": {
+            "label": "Redis - Memory Store",
+            "onAutoForward": "ignore"
+        }
+    },
+
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+
+    "remoteUser": "vscode",
+
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspaces/data-ai-course,type=bind,consistency=cached"
+    ],
+
+    "containerEnv": {
+        "PYTHONPATH": "/workspaces/data-ai-course",
+        "NODE_ENV": "development",
+        "DATA_COURSE_ENV": "codespaces"
+    }
+}

@@ -1,0 +1,195 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@email.com",
+      "age": 28,
+      "city": "New York",
+      "state": "NY",
+      "purchase_amount": 1250.00,
+      "registration_date": "2023-01-15",
+      "customer_segment": "Premium"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@email.com",
+      "age": 35,
+      "city": "Los Angeles",
+      "state": "CA",
+      "purchase_amount": 890.50,
+      "registration_date": "2023-02-20",
+      "customer_segment": "Standard"
+    },
+    {
+      "id": 3,
+      "name": "Carol Davis",
+      "email": "carol.davis@email.com",
+      "age": 42,
+      "city": "Chicago",
+      "state": "IL",
+      "purchase_amount": 2100.75,
+      "registration_date": "2023-03-10",
+      "customer_segment": "VIP"
+    },
+    {
+      "id": 4,
+      "name": "David Wilson",
+      "email": "david.wilson@email.com",
+      "age": 31,
+      "city": "Houston",
+      "state": "TX",
+      "purchase_amount": 675.25,
+      "registration_date": "2023-04-05",
+      "customer_segment": "Standard"
+    },
+    {
+      "id": 5,
+      "name": "Emma Brown",
+      "email": "emma.brown@email.com",
+      "age": 29,
+      "city": "Phoenix",
+      "state": "AZ",
+      "purchase_amount": 1450.00,
+      "registration_date": "2023-05-12",
+      "customer_segment": "Premium"
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ORD-001",
+      "customer_id": 1,
+      "order_date": "2024-01-15",
+      "total": 1250.00,
+      "status": "Completed",
+      "items": [
+        {"product_id": 101, "product_name": "Laptop", "quantity": 1, "price": 999.99},
+        {"product_id": 102, "product_name": "Wireless Mouse", "quantity": 1, "price": 49.99},
+        {"product_id": 103, "product_name": "USB-C Hub", "quantity": 1, "price": 89.99}
+      ]
+    },
+    {
+      "order_id": "ORD-002",
+      "customer_id": 2,
+      "order_date": "2024-01-20",
+      "total": 890.50,
+      "status": "Completed",
+      "items": [
+        {"product_id": 104, "product_name": "Smartphone", "quantity": 1, "price": 699.99},
+        {"product_id": 105, "product_name": "Phone Case", "quantity": 1, "price": 29.99},
+        {"product_id": 106, "product_name": "Screen Protector", "quantity": 1, "price": 19.99}
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 999.99,
+      "stock": 50,
+      "description": "High-performance laptop for professionals"
+    },
+    {
+      "id": 102,
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "price": 49.99,
+      "stock": 200,
+      "description": "Ergonomic wireless mouse with long battery life"
+    },
+    {
+      "id": 103,
+      "name": "USB-C Hub",
+      "category": "Electronics",
+      "price": 89.99,
+      "stock": 75,
+      "description": "Multi-port USB-C hub with HDMI and ethernet"
+    }
+  ],
+  "sales_data": {
+    "regions": [
+      {"region": "North", "sales": 125000, "customers": 150, "growth": 12.5},
+      {"region": "South", "sales": 189000, "customers": 220, "growth": 8.3},
+      {"region": "East", "sales": 298000, "customers": 310, "growth": 15.7},
+      {"region": "West", "sales": 456000, "customers": 380, "growth": 18.2},
+      {"region": "Central", "sales": 201000, "customers": 180, "growth": 9.8}
+    ],
+    "monthly_trends": [
+      {"month": "Jan", "revenue": 85000, "orders": 450},
+      {"month": "Feb", "revenue": 92000, "orders": 520},
+      {"month": "Mar", "revenue": 78000, "orders": 410},
+      {"month": "Apr", "revenue": 105000, "orders": 580},
+      {"month": "May", "revenue": 118000, "orders": 640},
+      {"month": "Jun", "revenue": 135000, "orders": 720}
+    ]
+  },
+  "unstructured_samples": {
+    "customer_feedback": [
+      {
+        "id": "FB-001",
+        "customer_id": 1,
+        "date": "2024-01-20",
+        "rating": 5,
+        "comment": "Excellent service! The laptop arrived quickly and works perfectly. Very satisfied with my purchase."
+      },
+      {
+        "id": "FB-002",
+        "customer_id": 2,
+        "date": "2024-01-25",
+        "rating": 4,
+        "comment": "Good product quality, but the delivery took longer than expected. Overall happy with the purchase."
+      }
+    ],
+    "support_tickets": [
+      {
+        "ticket_id": "TIC-001",
+        "customer_id": 3,
+        "date": "2024-02-01",
+        "category": "Technical Support",
+        "priority": "Medium",
+        "description": "Having trouble connecting the wireless mouse to my computer. The pairing process doesn't seem to work.",
+        "status": "Resolved"
+      }
+    ],
+    "email_content": {
+      "subject": "Your Order Has Been Shipped!",
+      "body": "Dear Customer, We're excited to let you know that your recent order has been shipped and is on its way to you. You can track your package using the tracking number provided. Thank you for choosing us!",
+      "metadata": {
+        "sent_date": "2024-02-05",
+        "recipient_count": 1250,
+        "open_rate": "68%",
+        "click_rate": "12%"
+      }
+    }
+  },
+  "data_quality_examples": {
+    "clean_data": [
+      {"id": 1, "name": "John Smith", "email": "john.smith@email.com", "phone": "555-0123"},
+      {"id": 2, "name": "Jane Doe", "email": "jane.doe@email.com", "phone": "555-0456"}
+    ],
+    "dirty_data": [
+      {"id": 1, "name": "john smith", "email": "JOHN.SMITH@EMAIL.COM", "phone": "(555) 0123"},
+      {"id": 2, "name": "Jane    Doe", "email": "jane.doe@email", "phone": "5550456"},
+      {"id": 3, "name": "", "email": "invalid-email", "phone": "555-ABCD"}
+    ]
+  },
+  "traditional_tools": {
+    "sql_databases": ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "SQLite"],
+    "data_warehouses": ["Amazon Redshift", "Google BigQuery", "Snowflake", "Azure Synapse", "Teradata"],
+    "etl_tools": ["Informatica", "Talend", "SSIS", "Pentaho", "DataStage"],
+    "visualization_tools": ["Tableau", "Power BI", "QlikView", "SAS", "Crystal Reports"],
+    "programming_languages": ["SQL", "Python", "R", "Java", "C#", "COBOL"]
+  },
+  "metadata": {
+    "created_date": "2024-01-01",
+    "last_updated": "2024-02-01",
+    "data_sources": ["CRM System", "E-commerce Platform", "Marketing Automation", "Customer Support"],
+    "data_governance": {
+      "data_classification": "Internal Use",
+      "retention_period": "7 years",
+      "compliance": ["GDPR", "CCPA", "SOX"]
+    }
+  }
+}
