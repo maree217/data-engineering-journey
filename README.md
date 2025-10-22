@@ -1,5 +1,12 @@
 # Data Engineering Journey: From Traditional to AI-Driven Systems
 
+[![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)](https://www.python.org/)
+[![Azure](https://img.shields.io/badge/Azure-Ready-0078D4)](https://azure.microsoft.com/)
+[![Codespaces](https://img.shields.io/badge/GitHub-Codespaces%20Ready-181717?logo=github)](https://github.com/features/codespaces)
+[![GitHub stars](https://img.shields.io/github/stars/maree217/data-engineering-journey?style=social)](https://github.com/maree217/data-engineering-journey/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/maree217/data-engineering-journey)](https://github.com/maree217/data-engineering-journey/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A comprehensive hands-on course for engineering graduates transitioning into AI and data engineering, using GitHub Codespaces, Azure, and the Microsoft ecosystem.
 
 ## 🎯 Course Overview
